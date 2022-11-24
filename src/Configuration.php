@@ -49,6 +49,7 @@ class Configuration
         'token' => null,
         'user' => null,
         'nkey' => null,
+        'pubNkey' => null,
         'verbose' => false,
         'version' => 'dev',
         'pingInterval' => 2,
@@ -79,6 +80,7 @@ class Configuration
             'pedantic' => $this->pedantic,
             'verbose' => $this->verbose,
             'version' => $this->version,
+            'pubNkey' => $this->pubNkey,
             'headers' => true,
         ];
 
