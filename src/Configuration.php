@@ -25,6 +25,7 @@ class Configuration
     public ?string $token;
     public ?string $user;
     public ?string $nkey;
+    public ?string $pubNkey;
 
     public ?string $tlsKeyFile;
     public ?string $tlsCertFile;

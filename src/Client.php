@@ -46,9 +46,10 @@ class Client
         $logger = null,
     ) {
         if (!$configuration) {
-            $this->configuration = new Configuration();
+            $configuration = new Configuration();
         }
 
+        $this->configuration = $configuration;
         $this->api = new Api($this);
         $this->logger = $logger;;
         $this->authenticator = Authenticator::create($this->configuration);
