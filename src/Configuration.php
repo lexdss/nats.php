@@ -8,28 +8,27 @@ use InvalidArgumentException;
 
 class Configuration
 {
-    public readonly bool $pedantic;
-    public readonly bool $reconnect;
-    public readonly bool $verbose;
-    public readonly int $port;
-    public readonly string $host;
-    public readonly string $lang;
-    public readonly string $version;
-    public readonly float $timeout;
-    public readonly int $pingInterval;
+    public bool $pedantic;
+    public bool $reconnect;
+    public bool $verbose;
+    public int $port;
+    public string $host;
+    public string $lang;
+    public string $version;
+    public float $timeout;
+    public int $pingInterval;
 
-    public readonly string $inboxPrefix;
+    public string $inboxPrefix;
 
-    public readonly ?string $jwt;
-    public readonly ?string $pass;
-    public readonly ?string $token;
-    public readonly ?string $user;
-    public readonly ?string $nkey;
-    public readonly ?string $pubNkey;
+    public ?string $jwt;
+    public ?string $pass;
+    public ?string $token;
+    public ?string $user;
+    public ?string $nkey;
 
-    public readonly ?string $tlsKeyFile;
-    public readonly ?string $tlsCertFile;
-    public readonly ?string $tlsCaFile;
+    public ?string $tlsKeyFile;
+    public ?string $tlsCertFile;
+    public ?string $tlsCaFile;
 
     public const DELAY_CONSTANT = 'constant';
     public const DELAY_LINEAR = 'linear';

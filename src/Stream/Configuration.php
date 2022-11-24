@@ -25,7 +25,7 @@ class Configuration
     private ?string $description = null;
 
     public function __construct(
-        public readonly string $name
+        public string $name
     ) {
     }
 

@@ -10,7 +10,7 @@ class Status
     public int $history;
     public int $ttl;
 
-    public function __construct(public readonly string $bucket, $streamInfo)
+    public function __construct(public string $bucket, $streamInfo)
     {
         $this->values = $streamInfo->state->messages;
         $this->history = $streamInfo->config->max_msgs_per_subject;

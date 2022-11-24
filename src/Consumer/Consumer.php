@@ -15,11 +15,13 @@ class Consumer
     private float $expires = 0.1;
     private int $batch = 1;
     private int $iterations = PHP_INT_MAX;
+    private Configuration $configuration;
 
-    public function __construct(
-        public readonly Client $client,
-        private readonly Configuration $configuration,
-    ) {
+    public Client $client;
+
+    public function __construct(Client $client, Configuration $configuration) {
+        $this->client = $client;
+        $this->configuration = $configuration;
     }
 
     public function create($ifNotExists = true): self

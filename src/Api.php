@@ -12,7 +12,7 @@ class Api
     private array $streams = [];
     private array $buckets = [];
 
-    public function __construct(public readonly Client $client)
+    public function __construct(public Client $client)
     {
     }
 
