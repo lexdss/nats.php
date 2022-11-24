@@ -16,7 +16,7 @@ class SecretKey
     private const PREFIX_BYTE_ACCOUNT  = 0;
     private const PREFIX_BYTE_USER     = 20 << 3;
 
-    public function __construct(public readonly string $value)
+    public function __construct(public string $value)
     {
         if (strlen($this->value) !== SODIUM_CRYPTO_SIGN_SECRETKEYBYTES) {
             throw new InvalidArgumentException("Invalid secret key provided");

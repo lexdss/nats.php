@@ -11,9 +11,9 @@ use Basis\Nats\Consumer\Configuration as ConsumerConfiguration;
 class Stream
 {
     private array $consumers = [];
-    private readonly Configuration $configuration;
+    private Configuration $configuration;
 
-    public function __construct(public readonly Client $client, string $name)
+    public function __construct(public Client $client, string $name)
     {
         $this->configuration = new Configuration($name);
     }

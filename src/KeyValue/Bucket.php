@@ -15,8 +15,8 @@ class Bucket
     private Configuration $configuration;
 
     public function __construct(
-        public readonly Client $client,
-        public readonly string $name,
+        public Client $client,
+        public string $name,
     ) {
         $this->configuration = new Configuration($name);
     }

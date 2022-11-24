@@ -14,7 +14,7 @@ class Configuration
     private ?int $replicas = null;
     private ?int $ttl = null;
 
-    public function __construct(private readonly string $name)
+    public function __construct(private string $name)
     {
     }
 

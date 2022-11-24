@@ -22,11 +22,12 @@ class Configuration
     private string $ackPolicy = AckPolicy::EXPLICIT;
     private string $deliverPolicy = DeliverPolicy::ALL;
     private string $replayPolicy = ReplayPolicy::INSTANT;
+    private string $stream;
+    private string $name;
 
-    public function __construct(
-        private readonly string $stream,
-        private readonly string $name
-    ) {
+    public function __construct(string $stream, string $name) {
+        $this->stream = $stream;
+        $this->name = $name;
     }
 
     public function getAckPolicy(): string
